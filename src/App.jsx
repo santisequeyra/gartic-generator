@@ -94,7 +94,7 @@ export default function App() {
         }}
       >
         <img
-          src="/public/favicon.png"
+          src="/src/assets/logo.png"
           alt="Logo"
           style={{
             width: 90,
