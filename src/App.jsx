@@ -21,6 +21,12 @@ const animals = [
   "zorro",
   "vaca",
   "gallina",
+  "jirafa",
+  "cebra",
+  "alien",
+  "momia",
+  "vampiro",
+  "bruja",
 ];
 
 const actions = [
@@ -39,9 +45,13 @@ const actions = [
   "peleando contra un bug",
   "haciendo un deploy",
   "tomando café",
-  "vendiendo helados",
   "escalando una montaña",
   "pintando un cuadro",
+  "durmiendo",
+  "llorando",
+  "riendo",
+  "haciendo flexiones",
+  "haciendo compras",
 ];
 
 const places = [
@@ -57,6 +67,20 @@ const places = [
   "en una cancha de fútbol",
   "en una piscina",
   "en un laboratorio",
+  "en un circo",
+];
+
+const objects = [
+  "con una motosierra",
+  "con un mate",
+  "con una guitarra",
+  "con un paraguas",
+  "con una computadora",
+  "con una pala",
+  "con una pizza",
+  "con una banana",
+  "con una valija",
+  "con un micrófono",
 ];
 
 const random = (arr) => arr[Math.floor(Math.random() * arr.length)];
@@ -65,10 +89,14 @@ export default function App() {
   const [phrase, setPhrase] = useState("");
 
   const generate = () => {
-    setPhrase(
-      `Un ${random(animals)} ${random(actions)} ${random(places)}.`
-    );
-  };
+  const extra = Math.random() > 0.4
+    ? ` ${random(objects)}`
+    : "";
+
+  setPhrase(
+    `Un ${random(animals)} ${random(actions)} ${random(places)}${extra}.`
+  );
+};
 
   return (
     <div
