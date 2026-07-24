@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logo from "./assets/logo.png";
 
 const animals = [
   "carpincho",
@@ -93,16 +94,7 @@ export default function App() {
           boxShadow: "0 20px 60px rgba(0,0,0,.25)",
         }}
       >
-        <img
-          src="/src/assets/logo.png"
-          alt="Logo"
-          style={{
-            width: 90,
-            height: 90,
-            objectFit: "contain",
-            marginBottom: 12,
-          }}
-        />
+        <img src={logo} alt="Logo" style={{width: 90,height: 90,objectFit: "contain",marginBottom: 12,}}/>
         <h1
           style={{
             marginTop: 12,
